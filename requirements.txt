@@ -1,5 +1,5 @@
 streamlit
 openai
 langchain
-pytesseract 
+tesseract-ocr
 pypdfium2
