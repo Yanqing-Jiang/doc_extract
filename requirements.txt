@@ -1,5 +1,4 @@
 streamlit
 openai
 langchain
-pytesseract
-pypdfium2
+pypdf
