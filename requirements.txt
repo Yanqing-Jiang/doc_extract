@@ -3,4 +3,3 @@ openai
 langchain
 pytesseract
 pypdfium2
-PIL
