@@ -65,7 +65,7 @@ def extract_content_from_url(url: str):
 
 # 3. Extract structured info from text via LLM
 def extract_structured_data(content: str, data_points):
-    llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613")
+    llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k-0613")
     template = """
     You are an expert admin who will extract core information from documents
 
