@@ -96,10 +96,10 @@ def extract_structured_data(content: str, data_points):
 # 5. Streamlit app
 def main():
     default_data_points = """{
-        "WIC Number": "what is the 5 digit WIC",
-        "Performance From": "what is the Perform From date",
-        "Performance To": "what is the Performance To date",
-        "Scan amount": "what is the DOLLARS PER",
+        "WIC Number": "what is the 6 digit WIC as integer format",
+        "Performance From": "what is the date from the 3rd TO: as date format but not equal to 0/00/00",
+        "Performance To": "what is the date behind CITY as date format but not equal to 0/00/00",
+        "Scan amount": "what is the DOLLARS PER as number format",
     }"""
 
     st.set_page_config(page_title="Doc extraction", page_icon=":bird:")
