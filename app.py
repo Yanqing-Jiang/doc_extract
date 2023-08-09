@@ -67,16 +67,16 @@ def extract_content_from_url(url: str):
 def extract_structured_data(content: str, data_points):
     llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k-0613")
     template = """
-    You are an expert admin who will extract core information from documents
+    You are an expert admin who will extract information from the entire document:
 
     {content}
 
-    Above is the content; please try to extract all data points from the content above 
+    Above is the content; please make sure to extract all data points from the entire content above 
     and export in a JSON array format:
     {data_points}
 
-    Now please extract details from the content  and export in a JSON array format, 
-    return ONLY the JSON array:
+    Now please extract details from the content and export in a JSON array format, 
+    return the JSON array:
     """
 
     prompt = PromptTemplate(
@@ -96,7 +96,7 @@ def extract_structured_data(content: str, data_points):
 # 5. Streamlit app
 def main():
     default_data_points = """{
-        "WIC Number": "what is the 6 digit WIC as integer format",
+        "WIC Number": "what is the 6 digit WIC as number format",
         "Performance From": "what is the date from the 3rd TO: as date format but not equal to 0/00/00",
         "Performance To": "what is the date behind CITY as date format but not equal to 0/00/00",
         "Scan amount": "what is the DOLLARS PER as number format",
